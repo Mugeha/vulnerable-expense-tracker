@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Expense - Expense Tracker</title>
+</head>
+<body>
+    <h1>Expense Details</h1>
+    
+    <nav>
+        <a href="/dashboard">Dashboard</a> | 
+        <a href="/add-expense">Add Expense</a> | 
+        <a href="/logout">Logout</a>
+    </nav>
+    
+    <hr>
+    
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <td>{{ expense.id }}</td>
+        </tr>
+        <tr>
+            <th>User ID</th>
+            <td>{{ expense.user_id }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ expense.description | safe }}</td>
+        </tr>
+        <tr>
+            <th>Amount</th>
+            <td>${{ expense.amount }}</td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td>{{ expense.date }}</td>
+        </tr>
+    </table>
+    
+    <p><a href="/dashboard">Back to Dashboard</a></p>
+</body>
+</html>

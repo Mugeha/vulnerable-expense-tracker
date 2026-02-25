@@ -91,6 +91,26 @@ def dashboard():
     
     return render_template('dashboard.html', username=username, expenses=expenses)
 
+@app.route('/expense/<int:expense_id>')
+def view_expense(expense_id):
+    # Check if user is logged in
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+    
+    # VULNERABLE CODE - No authorization check!
+    # We don't verify if this expense belongs to the logged-in user
+    conn = get_db_connection()
+    expense = conn.execute(
+        "SELECT * FROM expenses WHERE id = ?",
+        (expense_id,)
+    ).fetchone()
+    conn.close()
+    
+    if expense:
+        return render_template('view_expense.html', expense=expense)
+    else:
+        return "Expense not found!"
+
 @app.route('/logout')
 def logout():
     # Clear the session

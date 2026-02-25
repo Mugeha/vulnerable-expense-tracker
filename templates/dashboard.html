@@ -26,7 +26,9 @@
             {% for expense in expenses %}
             <tr>
                 <td>{{ expense.date }}</td>
-                <td>{{ expense.description }}</td>
+                <td>
+                    <a href="/expense/{{ expense.id }}">{{ expense.description }}</a>
+                </td>
                 <td>${{ expense.amount }}</td>
             </tr>
             {% endfor %}
