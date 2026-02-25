@@ -338,4 +338,4 @@ document.cookie
 
 **Document Version:** 1.0  
 **Last Updated:** February 2026  
-**Author:** [Your Name]
+**Author:** Mugeha Jackline

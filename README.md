@@ -77,6 +77,6 @@ vulnerable-expense-tracker/
 
 ---
 
-**Author:** Mugeha Jackline  
+**Author:** Mugeha Jackline
 **Date Started:** February 6, 2026  
 **Goal:** Build a comprehensive AppSec portfolio
