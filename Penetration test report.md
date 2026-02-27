@@ -203,6 +203,7 @@ Same as Finding #1 - use parameterized queries.
 **CVSS Score:** 9.5 (Critical)  
 #### Description
 I added an expense with a negative value and it got updated
+
 ![Business logic flaw](.\vulnerable-expense-tracker\Screenshots\negative value.png)
 ![](.\vulnerable-expense-tracker\Screenshots\negative amount updated.png)
 ### Finding #4: Insecure Direct Object Reference (IDOR)
@@ -255,8 +256,8 @@ HTTP/1.1 200 OK
 ```
 
 **Screenshots:**
-- ![IDOR - normal fetching of expense](vulnerable-expense-tracker\Screenshots\normal fetching of expense.png)
-- ![IDOR - intercepting request in burp](vulnerable-expense-tracker\Screenshots\intercepting request in burp.png)
+- ![IDOR - normal fetching of expense](.\vulnerable-expense-tracker\Screenshots\normal fetching of expense.png)
+- ![IDOR - intercepting request in burp](.\vulnerable-expense-tracker\Screenshots\intercepting request in burp.png)
 - ![IDOR - Accessing Other User's Data](.\vulnerable-expense-tracker\Screenshots\able to access another user's expense.png)
 
 #### Impact
